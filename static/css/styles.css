@@ -1,0 +1,376 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9f7f7;
+    /* background-color: #c52b2b; */
+
+}
+
+/* #brand-name{
+    position: relative;
+    z-index: 2;
+}
+
+#brand-name::before{
+    content: "";
+    background-color: #30ae69;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 35px;
+    width: 35px;
+    z-index: 1 ;    
+} */
+#brand-name {
+    position: relative;
+    display: inline-block;
+    color: #fff; /* White text */
+    text-align: center;
+    z-index: 2;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+#brand-name::before {
+    content: "";
+    background-color: #30ae69; /* Green color */
+    position: absolute;
+    left: 25px;
+    bottom: -8px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+}
+
+.container-fluid{
+    padding: 1.2rem 0;
+}
+
+.nav-link{
+    color:#fff;
+    margin-left: 6rem;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.nav-link:hover{
+    color: #fff;
+    border-bottom:1px solid #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+.nav-bar-color{
+   color: #fff;
+   padding: 0 2rem;
+}
+
+.content{
+    display: flex;
+    justify-content:end;
+    padding: 0 2rem;
+}
+
+#carouselExampleRide{
+    position: relative ;
+}
+
+.slider-img{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 3rem;
+    left: 60rem;
+
+}
+.title-head{
+    position: absolute;
+    top:30%;
+    left:10%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.btn{
+    position: absolute;
+    top:60%;
+    left:10%;
+    padding: 0.5rem 2rem;
+}
+
+.how-section{
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.head-2{
+    font-weight: 800;
+    position: relative;
+}
+
+.head-2::before{
+    content: "";
+    position: absolute;
+    font-weight: 800;
+    background-color: #30ae69;
+    width: 85px;
+    height: 8px;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.img-box-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10rem;
+    gap: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.img-box{
+    background-color: #f0eeee;
+    padding: 2rem;
+    transition: all 0.3s;
+}
+
+.txt{
+    margin-top: 1.4rem;
+}
+
+.img-box:hover{
+    background-color: rgba(107, 165, 20, 0.769);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.more-info{
+    text-decoration: none;
+    background-color: black;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.more-info:hover{
+    transform: translateX(-5rem);
+}
+
+.about-section{
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.about-head{
+    font-weight: 700;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+
+.about-head::before{
+    content: "";
+    background-color: #30ae69;
+    width: 90px;
+    height: 8px;
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-p{
+   padding: 0 8rem;
+}
+
+.connect-section{
+    margin-top: 5rem;
+    text-align: center;
+    background: linear-gradient(to right, #30ae69, #072e85);
+    padding: 2rem 0;
+}
+
+.app-container{
+    display: flex;
+    align-items: center;
+    padding:0 12rem;  
+    gap: 6rem;  
+    color: #fff;
+}
+
+.app{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+.head-4{
+    color: #fff;
+}
+
+.start-automatic{
+    text-align: center;
+    margin-top: 5rem;
+}
+.block-items{
+    text-align: left;
+}
+.start{
+    font-weight: 700;
+    position: relative;
+}
+
+.start::before{
+    content: "";
+    width: 100px;
+    height: 8px;
+    background-color: #30ae69;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* TESTIMONIAL */
+
+.testimonial-section{
+    margin-top: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: #f9f7f7;
+}
+
+.tetimonial-img{
+    margin-bottom: 3.4rem;
+}
+
+.testimonial-head{
+    font-weight: 700;
+    position: relative;
+}
+
+.testimonial-head::before{
+    content: "";
+    width: 100px;
+    height: 8px;
+    background-color: #30ae69;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.paragraph-2{
+    margin-bottom: 1.8rem;
+}
+
+.client-1{
+    margin-top: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 22rem;
+}
+
+.client-img{
+    background-color: #ffffff;
+    padding:0 1rem 0.2rem 1rem;
+    box-shadow: 0 0.2rem 3rem 0.4rem rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+.client-image{
+    position: relative;
+    bottom: 1rem;
+}
+
+.client-rerview{
+    text-align: left;
+}
+
+
+/* FOOTER SECTION */
+
+.footer-section{
+    background-color: #000;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    padding: 8rem 4rem 0 4rem;    
+    gap: 6rem;
+    background-color: #000;
+    color: #fff;
+    margin-top: 4.5rem;
+}
+
+.footer-container > *:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.footer-head{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.image-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-text{
+    margin-left: 0.6rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sub{
+    display: block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #30ae69;
+    padding: 0.8rem 1.1rem;
+    text-align: center;
+    border-radius: 2px;
+}
+
+input{
+    width: 100%;
+    height: 25%;
+    outline: none;
+    border: 1px solid #fff;
+}
+
+input[type="email"]{
+    padding-left: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+input[type="email"]::placeholder{
+    color: #fff;
+}
+
+.reserved{
+    text-align: center;
+    color: #5a5959;
+}
