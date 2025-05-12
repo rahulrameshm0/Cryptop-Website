@@ -26,7 +26,7 @@ def login_account(request):
         else:
             messages.error(request, 'Username or password is incorrect')
 
-    return render(request, 'index.html')
+    return render(request, 'login.html')
 
 def signup_account(request):
     if request.method == "POST":
@@ -48,4 +48,4 @@ def signup_account(request):
         create_user.save()
 
         messages.success(request, 'You have registerd succesfully!')
-        
+        return redirect('login')

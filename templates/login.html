@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>{% block title %}Login{% endblock title %}</title>
+    <style>
+        .body{
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{% static 'images/login-page.jpg' %}");
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }   
+    </style>
+</head>
+
+<body>
+
+    {% block content %}
+    {% include "navbar-layout.html" %}
+    {% include "login-layout.html" %}
+    {% endblock content %}
+</body>
+
+</html>
