@@ -17,16 +17,21 @@ def login_account(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        user = authenticate(request, name=username, password=password)
+        user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
             messages.success(request, 'Login successfull')
+            return render(request, 'index.html')
 
         else:
             messages.error(request, 'Username or password is incorrect')
 
     return render(request, 'login.html')
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')
 
 def signup_account(request):
     if request.method == "POST":
@@ -44,8 +49,15 @@ def signup_account(request):
             messages.error(request, 'This email address already exists')
             return redirect('register')
         
-        create_user = User.objects.create_user(username=username, password=password, email=email, confirm_password=confirm_password)
+        if password != confirm_password:
+            messages.error(request, 'Passowrd does not match')
+            return redirect('register')
+        
+        create_user = User.objects.create_user(username=username, password=password, email=email)
         create_user.save()
 
         messages.success(request, 'You have registerd succesfully!')
         return redirect('login')
+    
+    return render(request, 'signup.html')
+
