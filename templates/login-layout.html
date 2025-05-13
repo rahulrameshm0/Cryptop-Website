@@ -8,7 +8,7 @@
                     <h1 class="login-head">Login</h1>
                     {% csrf_token %}
                     <input class="username" type="text" name="username" id="username" placeholder="Username" required>
-                    <input class="password" type="password" name="password" id="password" placeholder="Password"required>
+                    <input class="password" type="password" name="password" id="password" placeholder="Password" required>
                     <button type="submit">Login</button>
                     <a href="{% url 'register' %}" class="f-pass">Don't have an account?</a>
                     {% for message in messages %}
@@ -23,7 +23,6 @@
                     {% endif %}
                     {% endfor %}
                 </form>
-
             </div>
         </div>
     </section>
