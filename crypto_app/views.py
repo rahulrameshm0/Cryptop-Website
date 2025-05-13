@@ -59,5 +59,5 @@ def signup_account(request):
         messages.success(request, 'You have registerd succesfully!')
         return redirect('login')
     
-    return render(request, 'signup.html')
+    return render(request, 'register.html')
 
