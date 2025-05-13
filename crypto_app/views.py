@@ -4,7 +4,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'login.html')
 
 def about(request):
     return render(request, 'about_layout.html')
@@ -24,7 +24,7 @@ def login_account(request):
             messages.success(request, 'Login successfull')
 
         else:
-            messages.error(request, 'Username or password is incorrect')
+            messages.error(request, 'Username or password is incorrect!')
 
     return render(request, 'login.html')
 
@@ -37,11 +37,11 @@ def signup_account(request):
 
 
         if User.objects.filter(username=username).exists():
-            messages.error(request, 'This username already exists')
+            messages.error(request, 'This username already exists!')
             return redirect('register')
         
         if User.objects.filter(email=email).exists():
-            messages.error(request, 'This email address already exists')
+            messages.error(request, 'This email address already exists!')
             return redirect('register')
         
         create_user = User.objects.create_user(username=username, password=password, email=email, confirm_password=confirm_password)
