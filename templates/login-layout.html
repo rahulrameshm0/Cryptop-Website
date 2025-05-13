@@ -8,16 +8,10 @@
                     <h1 class="login-head">Login</h1>
                     {% csrf_token %}
                     <input class="username" type="text" name="username" id="username" placeholder="Username" required>
-                    <input class="password" type="password" name="password" id="password" placeholder="Password" required>
+                    <input class="password" type="password" name="password" id="password" placeholder="Password"required>
                     <button type="submit">Login</button>
                     <a href="{% url 'register' %}" class="f-pass">Don't have an account?</a>
-                </form>
-                 {% csrf_token %}
-                    <input class="username" type="text" name="username" id="username" placeholder="Username" required>
-                    <input class="password" type="password" name="password" id="password" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                    <a href="#" class="f-pass">Forget Password?</a>
-                             {% for message in messages %}
+                    {% for message in messages %}
                     {% if messages %}
                     <div class="alert alert-danger" role="alert">
                         {{message}}
@@ -28,6 +22,8 @@
                     </div>
                     {% endif %}
                     {% endfor %}
+                </form>
+
             </div>
         </div>
     </section>
