@@ -383,7 +383,7 @@ input[type="email"]::placeholder {
     color: #5a5959;
 }
 
-/* LOGIN-SECTION */
+/* ACCOUNT-SECTION */
 
 .login-container {
     text-align: center;
@@ -393,26 +393,30 @@ input[type="email"]::placeholder {
     margin-top: 5%;
 }
 
-form {
+form{
     display: flex;
     flex-direction: column;
     justify-content: left;
     gap: 2rem;
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     background-color: #282525;
     /* box-shadow: 0 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2); */
     border-radius: 1rem;
 }
 
 .username,
-.password {
+.email,
+.password,
+.confirm-password {
     border: 1px solid #515050;
     width: 20rem;
     height: 3rem;
 }
 
 input[type="text"],
-input[type="password"]{
+input[type="email"],
+input[type="password"],
+input[type="confirm-password"]{
     padding-left: 1.5rem;
     color: #fff;
 }
@@ -421,7 +425,8 @@ input::placeholder{
     color: #fff;
 }
 
-input{
+input,
+.email{
     background-color: #282525;
 }
 
@@ -440,4 +445,8 @@ button {
 .login-head{
     color: #ffffff;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#name{
+    color: #30ae69;
 }
