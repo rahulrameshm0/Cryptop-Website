@@ -35,10 +35,10 @@ def logout_user(request):
 
 def signup_account(request):
     if request.method == "POST":
-        username = request.POST['username']
-        email = request.POST['password']
-        password = request.POST['password']
-        confirm_password = request.POST['confirm_password']
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        confirm_password = request.POST.get('confirm_password')
 
 
         if User.objects.filter(username=username).exists():
